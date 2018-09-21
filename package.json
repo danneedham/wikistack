@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/daltn/wikistack/issues"
   },
-  "homepage": "https://github.com/daltn/wikistack#readme"
+  "homepage": "https://github.com/daltn/wikistack#readme",
+  "dependencies": {
+    "morgan": "^1.9.1"
+  }
 }
