@@ -25,14 +25,14 @@ module.exports = () =>
     <div class="form-group">
       <label for="page-content" class="col-sm-2 control-label">Page Content</label>
       <div class="col-sm-10">
-        <input id="title" name="title" type="text" class="form-control"/>
+        <input id="content" name="content" type="text" class="form-control"/>
       </div>
     </div>
 
     <div class="page-status">
       <label for="page-status" class="col-sm-2 control-label">Page Status</label>
       <div class="col-sm-10">
-        <input id="title" name="title" type="text" class="form-control"/>
+        <input id="status" name="status" type="text" class="form-control"/>
       </div>
     </div>
     <p></p>

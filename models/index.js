@@ -6,8 +6,7 @@ const db = new Sequelize('postgres://localhost:5432/wikistack', {
 const Page = db.define('pages', {
   title: {
     type: Sequelize.STRING,
-    allowNull: false,
-
+    allowNull: false
   },  
   slug: {
     type: Sequelize.STRING,
@@ -19,8 +18,16 @@ const Page = db.define('pages', {
   },
   status: {
     type: Sequelize.ENUM('open', 'closed'),
-    allowNull: false  
+    allowNull: true  
   }
+})
+
+function generateSlug(string){
+  return string.replace(/\s+/g,'_')
+}
+
+Page.beforeValidate((pageInstance, optionsObject) => {
+  pageInstance['slug'] = generateSlug(pageInstance.title);
 })
 
 const User = db.define('users', {
